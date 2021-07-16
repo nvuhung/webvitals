@@ -15,7 +15,10 @@ ReactDOM.render(
 
 TagManager.initialize({ gtmId: 'GTM-KXCXCHN' });
 
-function sendToAnalytics({ id, name, value }) {
+function sendToAnalytics(event) {
+  console.log('event :>> ', event);
+  const { id, name, value } = event;
+
   window.dataLayer = window.dataLayer || [];
 
   window.dataLayer.push({
