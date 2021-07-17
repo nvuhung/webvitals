@@ -27,6 +27,7 @@ function sendToAnalytics(event) {
     valueRounded: Math.round(name === 'CLS' ? value * 1000 : value),
     deltaRounded: Math.round(name === 'CLS' ? value * 1000 : value),
   };
+  console.log('event :>> ', event);
   console.log('webVitalsMeasurement :>> ', webVitalsMeasurement);
 
   window.dataLayer.push({
